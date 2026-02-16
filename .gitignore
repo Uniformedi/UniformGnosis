@@ -1,0 +1,8 @@
+# Ignore everything
+*
+
+# Allow only these files
+!.gitignore
+!Uniform_Gnosis_Volume_I.docx
+!Uniform_Gnosis_Volume_I.html
+!Uniform_Gnosis_Volume_I.pdf
