@@ -63,6 +63,83 @@ You are free to share, copy, redistribute, adapt, remix, transform, and build up
 
 **Commercial use**, including print reproduction for sale, requires separate written permission from the author. For commercial licensing inquiries, contact Daniel Medina at Uniformedi LLC.
 
+## Deploying to Cloudflare Pages
+
+### Step 1: Connect Repository
+
+1. Log in to the [Cloudflare Dashboard](https://dash.cloudflare.com)
+2. Go to **Workers & Pages** in the left sidebar
+3. Click **Create** > **Pages** > **Connect to Git**
+4. Select **GitHub** and authorize Cloudflare if prompted
+5. Choose the **Uniformedi/UniformGnosis** repository
+6. Click **Begin setup**
+
+### Step 2: Configure Build Settings
+
+| Setting | Value |
+|---------|-------|
+| **Project name** | `uniformgnosis` (or your preferred subdomain) |
+| **Production branch** | `main` |
+| **Build command** | *(leave empty — no build step needed)* |
+| **Build output directory** | `/` |
+
+This is a static site with no framework or build process. Cloudflare serves the files directly from the repository root.
+
+### Step 3: Deploy
+
+1. Click **Save and Deploy**
+2. Wait for the deployment to complete (usually under 1 minute)
+3. Your site will be live at: `https://<project-name>.pages.dev`
+
+### Custom Domain (Optional)
+
+To use a custom domain like `read.uniformedi.com`:
+
+1. Go to your Pages project > **Custom domains**
+2. Click **Set up a custom domain**
+3. Enter your domain (e.g., `read.uniformedi.com`)
+4. If the domain is already on Cloudflare, the DNS record is added automatically
+5. If not, add the provided CNAME record to your DNS provider:
+   ```
+   Type:  CNAME
+   Name:  read
+   Value: <project-name>.pages.dev
+   ```
+6. Wait for SSL certificate provisioning (usually a few minutes)
+
+### Site Structure
+
+```
+Repository Root (/)
+├── index.html                        → Redirects to the book
+├── Uniform_Gnosis_Volume_I.html      → The full interactive book
+├── images/                           → Book illustrations (10 PNGs)
+├── LICENSE
+└── README.md
+```
+
+Visitors to the root URL (`/`) are instantly redirected to the book. The HTML file is self-contained — all styles and scripts are inline. Images load from the `images/` folder via relative paths. No server-side processing required.
+
+### Automatic Deployments
+
+Every push to `main` triggers a new deployment:
+
+```bash
+git add <files>
+git commit -m "description of changes"
+git push origin main
+```
+
+### Troubleshooting
+
+| Issue | Solution |
+|-------|----------|
+| Images not loading | Verify `images/` folder is committed and paths use `images/` prefix |
+| 404 on root URL | Ensure `index.html` exists at the repository root |
+| Build output directory error | Must be `/` (forward slash), not empty |
+| Large file warnings | PNG images are 7–9 MB each; Cloudflare allows up to 25 MB per file |
+| Custom domain not working | Check DNS propagation; allow up to 24 hours for SSL |
+
 ## The Spiritual Codex Series
 
 - **Volume I:** *Uniform Gnosis — The Architecture of Reality* (this volume)
