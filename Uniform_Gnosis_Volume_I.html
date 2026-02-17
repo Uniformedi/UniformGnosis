@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Spiritual Codex &mdash; Volume I: Uniform Gnosis</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js"></script>
+
 <style>
   :root {
     --bg: #faf8f3;
@@ -439,7 +439,19 @@
       box-shadow: none;
       max-width: 90%;
     }
-    .book-image { page-break-inside: avoid; }
+    .book-image {
+      page-break-inside: avoid;
+      text-align: center;
+      margin: 20px auto;
+    }
+    .frontispiece, .closing-image {
+      page-break-after: always;
+    }
+    .part-opener {
+      page-break-before: always;
+    }
+    h2, h3 { page-break-after: avoid; }
+    img { max-width: 100% !important; }
   }
 
   /* Cover page */
@@ -798,30 +810,7 @@
 <script>
   // Export PDF
   document.getElementById('exportPdfBtn').addEventListener('click', function() {
-    const btn = this;
-    const btnText = btn.querySelector('span');
-    const originalText = btnText.textContent;
-    btnText.textContent = 'Generating...';
-    btn.disabled = true;
-
-    const element = document.querySelector('.main-content');
-
-    const opt = {
-      margin:       [0.6, 0.6, 0.6, 0.6],
-      filename:     'Spiritual_Codex_Volume_I_Uniform_Gnosis.pdf',
-      image:        { type: 'jpeg', quality: 0.98 },
-      html2canvas:  { scale: 2, useCORS: true, letterRendering: true },
-      jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' },
-      pagebreak:    { mode: ['avoid-all', 'css', 'legacy'] }
-    };
-
-    html2pdf().set(opt).from(element).save().then(function() {
-      btnText.textContent = originalText;
-      btn.disabled = false;
-    }).catch(function() {
-      btnText.textContent = originalText;
-      btn.disabled = false;
-    });
+    window.print();
   });
 
   // Mobile menu toggle
