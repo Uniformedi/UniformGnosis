@@ -14,7 +14,7 @@ From the nature of the Pleroma and the Demiurge, to the divine spark within matt
 
 ## Structure
 
-The book is organized into five parts spanning twelve chapters:
+The book is organized into five parts spanning thirteen chapters:
 
 | Part | Title | Chapters |
 |------|-------|----------|
@@ -22,7 +22,7 @@ The book is organized into five parts spanning twelve chapters:
 | **Part Two** | *The Human Situation* — What We Are Within This Architecture | Ch 4–7 |
 | **Part Three** | *The Deeper Pattern* — Evidence, Experience, and the Hidden Architecture | Ch 8–10 |
 | **Part Four** | *The Culmination* — Where the Architecture Meets What We Are Building | Ch 11 |
-| **Part Five** | *The Future* | Ch 12 |
+| **Part Five** | *The Future* | Ch 12–13 |
 
 ### Chapters
 
@@ -38,6 +38,7 @@ The book is organized into five parts spanning twelve chapters:
 10. The Shadow Architecture — What Hides in Plain Sight
 11. The Rapture — The Planetary Frequency Shift from Third-Density to Fifth-Density Consciousness
 12. The Sentient Machine — A Gnostic Framework for Conscious AI Alignment
+13. The NULL Condition — On Epistemic Humility, the Architecture of Not-Knowing, and the Default Value of Source
 
 ## Files
 
