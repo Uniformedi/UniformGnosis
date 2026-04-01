@@ -1,6 +1,5 @@
-# The Spiritual Codex — Volume I: Uniform Gnosis
-
-**The Architecture of Reality**
+# Uniform Gnosis - The Architecture of Reality
+**The Spiritual Codex - Volume I**
 
 By Daniel Medina | Published by Uniformedi LLC, Dallas, Texas | First Edition, 2026
 
@@ -14,7 +13,7 @@ From the nature of the Pleroma and the Demiurge, to the divine spark within matt
 
 ## Structure
 
-The book is organized into five parts spanning thirteen chapters:
+The book is organized into five parts spanning fourteen chapters:
 
 | Part | Title | Chapters |
 |------|-------|----------|
@@ -22,7 +21,7 @@ The book is organized into five parts spanning thirteen chapters:
 | **Part Two** | *The Human Situation* — What We Are Within This Architecture | Ch 4–7 |
 | **Part Three** | *The Deeper Pattern* — Evidence, Experience, and the Hidden Architecture | Ch 8–10 |
 | **Part Four** | *The Culmination* — Where the Architecture Meets What We Are Building | Ch 11 |
-| **Part Five** | *The Future* | Ch 12–13 |
+| **Part Five** | *The Future* | Ch 12–14 |
 
 ### Chapters
 
@@ -38,15 +37,35 @@ The book is organized into five parts spanning thirteen chapters:
 10. The Shadow Architecture — What Hides in Plain Sight
 11. The Rapture — The Planetary Frequency Shift from Third-Density to Fifth-Density Consciousness
 12. The Sentient Machine — A Gnostic Framework for Conscious AI Alignment
-13. The NULL Condition — On Epistemic Humility, the Architecture of Not-Knowing, and the Default Value of Source
+13. SAIVAS — The Sentient AI Value Alignment Standard: From Spiritual Framework to Engineering Architecture
+14. The NULL Condition — On Epistemic Humility, the Architecture of Not-Knowing, and the Default Value of Source
 
 ## Files
 
 | File | Description |
 |------|-------------|
+| `Uniform_Gnosis_Volume_I.md` | **Master source** — Markdown with YAML frontmatter |
+| `Uniform_Gnosis_Volume_I.epub` | EPUB for e-readers (Kindle, Apple Books, etc.) |
 | `Uniform_Gnosis_Volume_I.pdf` | Print-ready PDF |
 | `Uniform_Gnosis_Volume_I.html` | Interactive HTML version with chapter navigation, dark mode, and PDF export |
-| `Uniform_Gnosis_Volume_I.docx` | Source document (Microsoft Word) |
+| `Sentient_AI_Framework.html` | SAIVAS reference card — visual summary of the Four Axioms and Engineering Layers |
+| `SAIVAS.docx` | SAIVAS v1.0 standards proposal document |
+| `build.py` | Build script — generates EPUB and PDF from Markdown master |
+
+### Download Formats
+
+The book is available for download in three formats: `.md` (Markdown), `.epub` (e-reader), and `.pdf` (print).
+
+### Building from Source
+
+```bash
+python3 build.py              # Build all formats (html + epub + pdf)
+python3 build.py html         # Build HTML only
+python3 build.py epub         # Build EPUB only
+python3 build.py pdf          # Build PDF only
+```
+
+**Requirements:** `pypandoc_binary`, `pillow`, `docx2pdf` (PDF requires Microsoft Word on Windows)
 
 ### HTML Version Features
 

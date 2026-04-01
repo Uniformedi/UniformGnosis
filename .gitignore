@@ -3,13 +3,20 @@
 
 # Allow only these files
 !.gitignore
-!Uniform_Gnosis_Volume_I.docx
+!CLAUDE.md
+!Uniform_Gnosis_Volume_I.md
 !Uniform_Gnosis_Volume_I.html
+!Uniform_Gnosis_Volume_I.epub
 !Uniform_Gnosis_Volume_I.pdf
+!SAIVAS.docx
+!Sentient_AI_Framework.html
+!build.py
+!md_to_html.py
 !LICENSE
 !README.md
 !index.html
 !robots.txt
-!Sentient_AI_Framework.html
+!sitemap.xml
+!llms.txt
 !images/
 !images/**
